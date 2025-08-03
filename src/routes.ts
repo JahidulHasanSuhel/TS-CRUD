@@ -65,6 +65,7 @@ router.delete("/todos/:id", async(req:Request, res:Response)=>{
     }
 });
 
+//upate
 router.put("/todos/:id", async(req: Request, res: Response)=>{
     const todoId = parseInt(req.params.id, 10);
     const {title} = req.body;
