@@ -1,0 +1,25 @@
+name: ts crud
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-app:
+    name: Build & Deploy 
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - run: node -v
+
+      - run: npm ci
+
+      - name: Setup finish
+        run: echo "Hurray!!"
